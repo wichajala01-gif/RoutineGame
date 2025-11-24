@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Routine Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- หน้าเริ่มเกม -->
+<div id="start-screen">
+    <h1>🎉 Daily Routine Game 🎉</h1>
+    <img src="images/logo.png" alt="Logo" id="game-logo">
+    <p>ฝึกคำศัพท์ภาษาอังกฤษด้วยมือของคุณ!</p>
+    <button id="start-button">เริ่มเกม</button>
+</div>
+
+<!-- กล้อง + canvas สำหรับ hand tracking -->
+<video id="camera" autoplay playsinline class="mirror"></video>
+<canvas id="hand-canvas"></canvas>
+
+<!-- พื้นที่คำถาม -->
+<div id="question-area">
+    <img id="question-image" src="" alt="image">
+    <div id="thai-word"></div>
+</div>
+
+<!-- ข้อมูลเกม -->
+<div id="game-info">
+    <div id="score-box">Score: 0</div>
+    <div id="round-box">Question: 1</div>
+    <div id="timer-box">Time: 60</div>
+</div>
+
+<!-- ตัวเลือกคำตอบ -->
+<div id="choice-tl" class="choice"></div>
+<div id="choice-tr" class="choice"></div>
+<div id="choice-bl" class="choice"></div>
+<div id="choice-br" class="choice"></div>
+
+<!-- หน้าเกมจบ -->
+<div id="game-over-screen" style="display:none;">
+    <h1>⏰ หมดเวลา!</h1>
+    <p id="final-score">คุณได้คะแนน 0</p>
+    <button id="restart-button">เริ่มใหม่</button>
+</div>
+
+<!-- Tensorflow handpose -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+
+<!-- สคริปต์เกม -->
+<script src="script.js"></script>
+</body>
+</html>

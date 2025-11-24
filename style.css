@@ -1,0 +1,49 @@
+/* ====== กล้อง + mirror ====== */
+#camera.mirror { position:absolute; top:0; left:0; width:100vw; height:100vh; object-fit:cover; transform:scaleX(-1); z-index:-1; }
+#hand-canvas { position:absolute; top:0; left:0; width:100vw; height:100vh; pointer-events:none; z-index:50; }
+
+/* ====== หน้าเริ่มเกม ====== */
+#start-screen {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: linear-gradient(135deg,#a1c4fd,#c2e9fb);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 100;
+}
+#start-screen h1 { font-size: 3rem; color:white; text-shadow:2px 2px 6px #555; margin-bottom:20px; }
+#game-logo { width:180px; height:180px; margin-bottom:20px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+#start-screen p { font-size:1.5rem; color:white; margin-bottom:20px;}
+#start-button { font-size:2rem; padding:15px 50px; border-radius:15px; border:none; background:#ff7f50; color:white; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+#start-button:hover{transform:scale(1.08);}
+
+/* ====== พื้นที่คำถาม ====== */
+#question-area { position:absolute; top:12%; left:50%; transform:translateX(-50%); text-align:center; }
+#question-image { width:180px; height:180px; object-fit:contain; border-radius:20px; }
+#thai-word { margin-top:10px; font-size:2rem; font-weight:bold; color:white; text-shadow:0 0 8px black; }
+
+/* ====== ข้อมูลเกม ====== */
+#game-info { position:absolute; top:1%; left:50%; transform:translateX(-50%); display:flex; gap:20px; background: rgba(0,0,0,0.4); padding:10px 20px; border-radius:12px; color:white; font-size:1.4rem; font-weight:bold; }
+
+/* ====== ตัวเลือกคำตอบ ====== */
+.choice { position:absolute; width:26vw; height:16vh; background: rgba(255,255,255,0.3); backdrop-filter:blur(6px); border-radius:12px; font-size:1.6rem; font-weight:bold; display:flex; justify-content:center; align-items:center; cursor:pointer; transition: transform 0.1s;}
+.choice:hover{ transform:scale(1.05);}
+#choice-tl{ top:2%; left:2%; }
+#choice-tr{ top:2%; right:2%; }
+#choice-bl{ bottom:2%; left:2%; }
+#choice-br{ bottom:2%; right:2%; }
+
+.correct { box-shadow:0 0 25px #00ff00; border:3px solid #00ff00; }
+.wrong { box-shadow:0 0 25px #ff0000; border:3px solid #ff0000; }
+
+/* ====== หน้าเกมจบ ====== */
+#game-over-screen { position:absolute; top:0; left:0; width:100vw; height:100vh; background:linear-gradient(135deg,#fbc2eb,#a18cd1); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+#game-over-screen h1{ font-size:3rem;color:white; text-shadow:2px 2px 8px #555; margin-bottom:20px;}
+#game-over-screen p{ font-size:2rem;color:white;margin-bottom:30px; }
+#restart-button{ font-size:2rem;padding:15px 50px;border-radius:20px;border:none;background-color:#ff7f50;color:white;cursor:pointer;}
+#restart-button:hover{ transform:scale(1.05);}    
