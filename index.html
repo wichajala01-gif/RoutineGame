@@ -16,8 +16,8 @@
     <button id="start-button">เริ่มเกม</button>
 </div>
 
-<!-- กล้อง + canvas สำหรับ hand tracking -->
-<video id="camera" autoplay playsinline class="mirror"></video>
+<!-- กล้อง + canvas -->
+<video id="camera" autoplay playsinline muted></video>
 <canvas id="hand-canvas"></canvas>
 
 <!-- พื้นที่คำถาม -->
@@ -26,7 +26,7 @@
     <div id="thai-word"></div>
 </div>
 
-<!-- ข้อมูลเกม -->
+<!-- คะแนน / เวลา -->
 <div id="game-info">
     <div id="score-box">Score: 0</div>
     <div id="round-box">Question: 1</div>
@@ -46,12 +46,15 @@
     <button id="restart-button">เริ่มใหม่</button>
 </div>
 
-<!-- Tensorflow handpose -->
+<!-- โหลด Tensorflow + Mediapipe รุ่นใหม่ (สำคัญมาก) -->
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
 
-<!-- สคริปต์เกม -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
 <script src="script.js"></script>
 </body>
 </html>
